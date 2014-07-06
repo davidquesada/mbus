@@ -146,30 +146,16 @@
 - (void)loadTraceRouteForArrivalID:(NSString *)arrivalID {
     [self.mapView removeOverlays:self.mapView.overlays];
 
-    if ([[DataStore sharedManager] hasTraceRouteForRouteID:arrivalID]) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            MKPolyline *polyline = [self polylineFromTraceRoute:[[DataStore sharedManager] traceRouteForRouteID:arrivalID]];
-            [self.mapView addOverlay:polyline];
-        });
-    } else {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self.networkingSession fetchTraceRouteForRouteID:arrivalID
-                                             withSuccessBlock:^(NSArray *traceRoute) {
-                                                 if (traceRoute) {
-                                                     MKPolyline *polyline = [self polylineFromTraceRoute:traceRoute];
-                                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                                         [self.mapView addOverlay:polyline];
-                                                         
-                                                         if (self.arrivalIDsServicingStop.count > 1) {
-                                                             [self zoomToTopOverlay];
-                                                         }
-                                                     });
-                                                     
-                                                     [[DataStore sharedManager] persistTraceRoute:traceRoute forRouteID:arrivalID];
-                                                 }
-                                             } errorBlock:NULL];
-        });
-    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        Arrival *arrival = [[DataStore sharedManager] arrivalForID:arrivalID];
+        MKPolyline *polyline = [self polylineFromTraceRoute:arrival.traceRoute];
+        [self.mapView addOverlay:polyline];
+        
+//        if (self.arrivalIDsServicingStop.count > 1) {
+//            [self zoomToTopOverlay];
+//        }
+    });
 }
 
 - (MKPolyline *)polylineFromTraceRoute:(NSArray *)traceRoute {

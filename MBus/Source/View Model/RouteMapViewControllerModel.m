@@ -35,7 +35,7 @@
             NSMutableDictionary *mutableAnnotations = [NSMutableDictionary dictionaryWithDictionary:self.busAnnotations];
             
             for (Bus *bus in buses) {
-                if ([bus.routeID isEqualToString:self.arrival.id]) {
+                if ([bus.routeID isEqual:self.arrival.id]) {
                     if ([self.busAnnotations objectForKey:bus.id]) {
                         [(BusAnnotation *)[mutableAnnotations objectForKey:bus.id] setCoordinate:bus.coordinate];
                     } else {
@@ -86,17 +86,7 @@
 
 - (void)fetchTraceRoute {
     if (self.arrival) {
-        if ([[DataStore sharedManager] hasTraceRouteForRouteID:self.arrival.id]) {
-            [self createPolylineFromTraceRoute:[[DataStore sharedManager] traceRouteForRouteID:self.arrival.id]];
-        } else {
-            [self.networkingSession fetchTraceRouteForRouteID:self.arrival.id
-                                             withSuccessBlock:^(NSArray *traceRoute) {
-                                                 [self createPolylineFromTraceRoute:traceRoute];
-                                                 [[DataStore sharedManager] persistTraceRoute:traceRoute forRouteID:self.arrival.id];
-                                             } errorBlock:^(NSError *error) {
-                                                 self.polyline = self.polyline;
-                                             }];
-        }
+        [self createPolylineFromTraceRoute:self.arrival.traceRoute];
     }
 }
 

@@ -266,18 +266,18 @@ static NSString * const kPlacemarksFile         = @"placemarks.txt";
         return nil;
     }
     
-    NSMutableArray *mutableArray = [NSMutableArray array];
-    for (Stop *stop in stops) {
-        for (Arrival *arrival in self.arrivals) {
-            for (ArrivalStop *arrivalStop in arrival.stops) {
-                if ([arrivalStop.name isEqualToString:stop.uniqueName] && ![mutableArray containsObject:stop]) {
-                    [mutableArray push:stop];
-                }
-            }
-        }
+    NSMutableSet *stopIDs = [NSMutableSet setWithArray:[stops valueForKey:@"id"]];
+    
+    for (Arrival *arrival in self.arrivals)
+    {
+        NSSet *set = [NSSet setWithArray:arrival.stops];
+        [stopIDs minusSet:set];
     }
     
-    return mutableArray;
+    NSIndexSet *idxs = [stops indexesOfObjectsPassingTest:^BOOL(Stop *busStop, NSUInteger idx, BOOL *stop) {
+        return [stopIDs containsObject:[busStop id]];
+    }];
+    return [stops objectsAtIndexes:idxs];
 }
 
 - (NSArray *)arrivalsContainingStopName:(NSString *)name {
