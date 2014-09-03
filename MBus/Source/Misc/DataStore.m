@@ -259,6 +259,23 @@ static NSString * const kPlacemarksFile         = @"placemarks.txt";
     }];
 }
 
+- (void)fetchETAForStopID:(NSNumber *)stopID successBlock:(void (^)(ETA *eta))block errorBlock:(DataStoreErrorBlock)errorBlock requester:(id)requester {
+    SendEventWithLabel(ANALYTICS_FETCH_ETA, NSStringFromClass([requester class]));
+    [self.networkingSession fetchETAForStopWithID:stopID successBlock:^(ETA *eta) {
+        
+        if (block)
+            block(eta);
+        
+    } errorBlock:^(NSError *error) {
+        
+        if (errorBlock) {
+            errorBlock(error);
+        }
+        
+        [self handleError:error];
+    }];
+}
+
 #pragma mark -
 
 - (NSArray *)stopsBeingServicedInArray:(NSArray *)stops {
@@ -266,13 +283,15 @@ static NSString * const kPlacemarksFile         = @"placemarks.txt";
         return nil;
     }
     
-    NSMutableSet *stopIDs = [NSMutableSet setWithArray:[stops valueForKey:@"id"]];
-    
+    NSMutableSet *stopIDs = [NSMutableSet new];
     for (Arrival *arrival in self.arrivals)
     {
         NSSet *set = [NSSet setWithArray:arrival.stops];
-        [stopIDs minusSet:set];
+        [stopIDs unionSet:set];
     }
+    
+    NSSet *desiredIDs = [NSSet setWithArray:[stops valueForKey:@"id"]];
+    [stopIDs intersectSet:desiredIDs];
     
     NSIndexSet *idxs = [stops indexesOfObjectsPassingTest:^BOOL(Stop *busStop, NSUInteger idx, BOOL *stop) {
         return [stopIDs containsObject:[busStop id]];
@@ -280,15 +299,15 @@ static NSString * const kPlacemarksFile         = @"placemarks.txt";
     return [stops objectsAtIndexes:idxs];
 }
 
-- (NSArray *)arrivalsContainingStopName:(NSString *)name {
+- (NSArray *)arrivalsContainingStopID:(NSNumber *)sid {
     if ([self arrivals] == nil) {
         return nil;
     }
     
     NSMutableArray *mutableArray = [NSMutableArray array];
     for (Arrival *arrival in self.arrivals) {
-        for (ArrivalStop *stop in arrival.stops) {
-            if ([stop.name isEqualToString:name]) {
+        for (NSNumber *stop in arrival.stops) {
+            if ([stop isEqual:sid]) {
                 [mutableArray push:arrival];
             }
         }
@@ -312,6 +331,9 @@ static NSString * const kPlacemarksFile         = @"placemarks.txt";
 }
 
 - (BOOL)arrivalHasBus1WithArrivalID:(NSString *)arrivalID {
+    
+#warning "Figure out the replacement for this."
+    return NO;
     Arrival *arrival = [self arrivalForID:arrivalID];
     for (ArrivalStop *stop in arrival.stops) {
         if (stop.timeOfArrival > 0) {
@@ -323,6 +345,9 @@ static NSString * const kPlacemarksFile         = @"placemarks.txt";
 }
 
 - (BOOL)arrivalHasBus2WithArrivalID:(NSString *)arrivalID {
+    
+#warning "Figure out the replacement for this."
+    return NO;
     Arrival *arrival = [self arrivalForID:arrivalID];
     for (ArrivalStop *stop in arrival.stops) {
         if (stop.timeOfArrival2 > 0) {
@@ -366,6 +391,16 @@ static NSString * const kPlacemarksFile         = @"placemarks.txt";
 - (Stop *)stopForArrivalStopName:(NSString *)name {
     for (Stop *stop in self.stops) {
         if ([stop.uniqueName isEqualToString:name]) {
+            return stop;
+        }
+    }
+    
+    return nil;
+}
+
+- (Stop *)stopForID:(NSNumber *)sid {
+    for (Stop *stop in self.stops) {
+        if ([stop.id isEqual:sid]) {
             return stop;
         }
     }

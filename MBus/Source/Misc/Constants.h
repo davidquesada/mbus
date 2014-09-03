@@ -54,6 +54,7 @@ extern NSString * const ANALYTICS_FETCH_STOPS;
 extern NSString * const ANALYTICS_FETCH_ARRIVALS;
 extern NSString * const ANALYTICS_FETCH_BUSES;
 extern NSString * const ANALYTICS_FETCH_ANNOUNCEMENTS;
+extern NSString * const ANALYTICS_FETCH_ETA;
 extern NSString * const ANALYTICS_APP_OPENED;
 extern NSString * const ANALYTICS_APP_RECEIVED_LOCAL_NOTIFICATION;
 extern NSString * const ANALYTICS_APP_RECEIVED_MEMORY_WARNING;

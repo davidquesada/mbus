@@ -7,7 +7,7 @@
 //
 
 #import "StopAnnotation.h"
-#import "ArrivalStop.h"
+#import "Stop.h"
 
 @interface StopAnnotation ()
 
@@ -17,7 +17,7 @@
 
 @implementation StopAnnotation
 
-- (instancetype)initWithArrivalStop:(ArrivalStop *)stop {
+- (instancetype)initWithArrivalStop:(Stop *)stop {
     if (self = [super init]) {
         _coordinate = stop.coordinate;
         _stop = stop;
@@ -26,7 +26,7 @@
 }
 
 - (NSString *)title {
-    return _stop.name2;
+    return _stop.humanName;
 }
 
 @end

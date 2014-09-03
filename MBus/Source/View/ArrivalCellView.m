@@ -10,6 +10,7 @@
 #import "ArrivalCellModel.h"
 #import "ArrivalStop.h"
 #import "Arrival.h"
+#import "Stop.h"
 
 @implementation ArrivalCellView
 
@@ -34,7 +35,7 @@
     CGFloat x = rect.size.height / 3;
 
     // STOP NAME
-    NSString *routeName = self.model.stop.name2;
+    NSString *routeName = self.model.stop.humanName;
     NSDictionary *routeNameDictionary = @{ NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:17],
                                            NSForegroundColorAttributeName: [UIColor blackColor]};
     CGFloat routeNameHeight = [routeName boundingRectWithSize:CGSizeMake(rect.size.width - 50, MAXFLOAT)

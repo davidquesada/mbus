@@ -10,7 +10,7 @@
 #import "UMNetworkingSession.h"
 #import "DataStore.h"
 #import "Arrival.h"
-#import "ArrivalStop.h"
+#import "Stop.h"
 #import "TraceRoute.h"
 #import "StopAnnotation.h"
 #import "BusAnnotation.h"
@@ -59,12 +59,14 @@
 - (void)fetchStopAnnotations {
     NSMutableDictionary *mutableAnnotations = [NSMutableDictionary dictionaryWithDictionary:self.stopAnnotations];
    
-    for (ArrivalStop *stop in self.arrival.stops) {
+    for (NSNumber *stopID in self.arrival.stops) {
+        Stop *stop = [[DataStore sharedManager] stopForID:stopID];
+#warning "WTF IS THIS?"
         if ([self.stopAnnotations objectForKey:self.arrival.id]) {
-            [(StopAnnotation *)[mutableAnnotations objectForKey:stop.name] setCoordinate:stop.coordinate];
+            [(StopAnnotation *)[mutableAnnotations objectForKey:stop.id] setCoordinate:stop.coordinate];
         } else {
             StopAnnotation *annotation = [[StopAnnotation alloc] initWithArrivalStop:stop];
-            [mutableAnnotations addEntriesFromDictionary:@{stop.name : annotation}];
+            [mutableAnnotations addEntriesFromDictionary:@{stop.id : annotation}];
         }
     }
     

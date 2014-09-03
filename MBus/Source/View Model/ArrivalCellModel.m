@@ -14,14 +14,15 @@
 
 @interface ArrivalCellModel ()
 
-@property (strong, nonatomic) ArrivalStop *arrivalStop;
+#warning "We don't need this?"
+@property (strong, nonatomic) Stop *arrivalStop;
 @property (strong, nonatomic) TTTArrayFormatter *arrayFormatter;
 
 @end
 
 @implementation ArrivalCellModel
 
-- (instancetype)initWithStop:(ArrivalStop *)stop forArrival:(Arrival *)arrival {
+- (instancetype)initWithStop:(Stop *)stop forArrival:(Arrival *)arrival {
     if (self = [super init]) {
         self.stop = stop;
         self.arrival = arrival;
@@ -54,9 +55,13 @@
 - (NSTimeInterval)firstBusArrival {
     BOOL hasBusOne = [[DataStore sharedManager] arrivalHasBus1WithArrivalID:self.arrival.id];
     BOOL hasBusTwo = [[DataStore sharedManager] arrivalHasBus2WithArrivalID:self.arrival.id];
+
     
-    NSTimeInterval busOneInterval = self.arrivalStop.timeOfArrival;
-    NSTimeInterval busTwoInterval = self.arrivalStop.timeOfArrival2;
+#warning "TODO"
+//    NSTimeInterval busOneInterval = self.arrivalStop.timeOfArrival;
+//    NSTimeInterval busTwoInterval = self.arrivalStop.timeOfArrival2;
+    NSTimeInterval busOneInterval = 0, busTwoInterval = 0;
+    
     
     if (hasBusOne && hasBusTwo) {
         if (busOneInterval >= busTwoInterval) {
@@ -79,13 +84,14 @@
     
     NSMutableArray *mutableArray = [NSMutableArray array];
 
-    if (hasBusOne) {
-        [mutableArray addObject:[self timeOfArrivalForTimeInterval:self.arrivalStop.timeOfArrival]];
-    }
-    
-    if (hasBusTwo) {
-        [mutableArray addObject:[self timeOfArrivalForTimeInterval:self.arrivalStop.timeOfArrival2]];
-    }
+#warning "TODO"
+//    if (hasBusOne) {
+//        [mutableArray addObject:[self timeOfArrivalForTimeInterval:self.arrivalStop.timeOfArrival]];
+//    }
+//    
+//    if (hasBusTwo) {
+//        [mutableArray addObject:[self timeOfArrivalForTimeInterval:self.arrivalStop.timeOfArrival2]];
+//    }
     
     return mutableArray;
 }

@@ -14,6 +14,7 @@
 #import "ArrivalStop.h"
 #import "Stop.h"
 #import "StopArrivalCellModel.h"
+//#import "ETA.h"
 
 NSString * NSStringForSection(Section section) {
     switch (section) {
@@ -44,6 +45,8 @@ NSString * NSStringForMiscCell(MiscCell cell) {
 @property (nonatomic, strong, readwrite) Stop *stop;
 @property (nonatomic, strong, readwrite) NSArray *arrivalsServicingStop, *arrivalsServicingStopCellModels, *arrivalIDsServicingStop, *miscCells;
 @property (nonatomic, strong, readwrite) TTTTimeIntervalFormatter *timeIntervalFormatter;
+
+@property (nonatomic, strong) ETA *eta;
 
 - (void)updateArrivals;
 
@@ -83,7 +86,7 @@ NSString * NSStringForMiscCell(MiscCell cell) {
 #pragma mark - Private
 
 - (void)updateArrivals {
-    NSArray *arrivals = [[DataStore sharedManager] arrivalsContainingStopName:self.stop.uniqueName];
+    NSArray *arrivals = [[DataStore sharedManager] arrivalsContainingStopID:self.stop.id];
     NSMutableArray *mutableArray = [NSMutableArray array];
     NSMutableArray *IDsMutableArray = [NSMutableArray array];
     

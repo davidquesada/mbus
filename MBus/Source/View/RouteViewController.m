@@ -137,8 +137,7 @@
         RouteMapViewController *routeMap = (RouteMapViewController *)segue.destinationViewController;
         routeMap.arrival = self.model.arrival;
     } else if ([segue.identifier isEqualToString:UMSegueStop]) {
-        ArrivalStop *arrivalStop = self.model.sortedStops[[self.tableView indexPathForSelectedRow].row];
-        Stop *stop = [[DataStore sharedManager] stopForArrivalStopName:arrivalStop.name];
+        Stop *stop = self.model.sortedStops[[self.tableView indexPathForSelectedRow].row];
         
         StopViewController *controller = (StopViewController *)segue.destinationViewController;
         controller.stop = stop;

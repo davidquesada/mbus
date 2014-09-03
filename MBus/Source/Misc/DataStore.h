@@ -10,7 +10,7 @@
 
 typedef void (^DataStoreErrorBlock)(NSError *error);
 
-@class Arrival, Bus, Route, ArrivalStop, Stop;
+@class Arrival, Bus, Route, ArrivalStop, Stop, ETA;
 
 @interface DataStore : NSObject
 
@@ -24,6 +24,7 @@ typedef void (^DataStoreErrorBlock)(NSError *error);
 - (void)fetchBusesWithErrorBlock:(DataStoreErrorBlock)errorBlock requester:(id)requester;
 - (void)fetchStopsWithErrorBlock:(DataStoreErrorBlock)errorBlock requester:(id)requester;
 - (void)fetchAnnouncementsWithErrorBlock:(DataStoreErrorBlock)errorBlock requester:(id)requester;
+- (void)fetchETAForStopID:(NSNumber *)stopID successBlock:(void (^)(ETA *eta))block errorBlock:(DataStoreErrorBlock)errorBlock requester:(id)requester;
 
 - (NSArray *)persistedArrivals;
 - (NSArray *)persistedBuses;
@@ -52,9 +53,9 @@ typedef void (^DataStoreErrorBlock)(NSError *error);
 - (NSArray *)stopsBeingServicedInArray:(NSArray *)array;
 
 /*
- Returns arrivals containing a stop name.  Used to determine what routes are servicing a given stop
+ Returns arrivals containing a stop ID.  Used to determine what routes are servicing a given stop
  */
-- (NSArray *)arrivalsContainingStopName:(NSString *)name;
+- (NSArray *)arrivalsContainingStopID:(NSNumber *)stopID;
 
 /*
  Searches through all ArrivalStop objects to find the one that matches a given stop name on a given route
@@ -77,5 +78,7 @@ typedef void (^DataStoreErrorBlock)(NSError *error);
 - (Arrival *)arrivalForID:(NSString *)arrivalID;
 
 - (Stop *)stopForArrivalStopName:(NSString *)name;
+
+- (Stop *)stopForID:(NSNumber *)sid;
 
 @end

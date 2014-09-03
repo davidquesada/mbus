@@ -47,10 +47,28 @@
     } requester:self];
 }
 
-- (NSArray *)stopsOrderedByTimeOfArrivalWithStops:(NSArray *)stops {
+- (NSArray *)stopsOrderedByTimeOfArrivalWithStops:(NSArray *)stopIDs
+{
+    NSArray *IDs = [self stopIDsOrderedByTimeOfArrivalWithStops:stopIDs];
+    NSMutableArray *stops = [NSMutableArray new];
+    
+    for (NSNumber *sid in IDs)
+    {
+        [stops push:[[DataStore sharedManager] stopForID:sid]];
+    }
+    return stops;
+}
+
+- (NSArray *)stopIDsOrderedByTimeOfArrivalWithStops:(NSArray *)stops {
     return [stops sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+
         ArrivalStop *a = obj1;
         ArrivalStop *b = obj2;
+        
+#warning "How are we going to order these?"
+        // For now, just do this. A and B are actually NSNumber.
+        return [(NSNumber *)a compare:(id)b];
+        
         
         if (a.timeOfArrival < b.timeOfArrival) {
             return (NSComparisonResult)NSOrderedAscending;

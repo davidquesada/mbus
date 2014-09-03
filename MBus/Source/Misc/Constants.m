@@ -55,6 +55,7 @@ NSString * const ANALYTICS_FETCH_STOPS                     = @"fetch_stops";
 NSString * const ANALYTICS_FETCH_ARRIVALS                  = @"fetch_arrivals";
 NSString * const ANALYTICS_FETCH_BUSES                     = @"fetch_buses";
 NSString * const ANALYTICS_FETCH_ANNOUNCEMENTS             = @"fetch_announcements";
+NSString * const ANALYTICS_FETCH_ETA                       = @"fetch_eta";
 NSString * const ANALYTICS_APP_OPENED                      = @"app_opened";
 NSString * const ANALYTICS_APP_RECEIVED_LOCAL_NOTIFICATION = @"app_received_local_notification";
 NSString * const ANALYTICS_APP_RECEIVED_MEMORY_WARNING     = @"app_received_memory_warning";

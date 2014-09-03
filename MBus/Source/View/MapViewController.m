@@ -87,7 +87,7 @@
         if (self.startingStop != nil) {
             for (NSString *routeID in self.arrivalIDsServicingStop) {
                 Arrival *arrival = [[DataStore sharedManager] arrivalForID:bus.routeID];
-                if ([routeID isEqualToString:arrival.id]) {
+                if ([routeID isEqual:arrival.id]) {
                     [self.mapView addAnnotation:annotation];
                     [annotationArray addObject:annotation];
                 }
