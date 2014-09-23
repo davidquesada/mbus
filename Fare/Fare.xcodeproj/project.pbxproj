@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2E9EB9519D1EFDA00C412A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E9EB9419D1EFDA00C412A4 /* Foundation.framework */; };
+		B2E9EBDD19D1F0AA00C412A4 /* Fare+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBC619D1F0AA00C412A4 /* Fare+UIColor.m */; };
+		B2E9EBDE19D1F0AA00C412A4 /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBC919D1F0AA00C412A4 /* Announcement.m */; };
+		B2E9EBDF19D1F0AA00C412A4 /* Arrival.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBCB19D1F0AA00C412A4 /* Arrival.m */; };
+		B2E9EBE019D1F0AA00C412A4 /* ArrivalStop.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBCD19D1F0AA00C412A4 /* ArrivalStop.m */; };
+		B2E9EBE119D1F0AA00C412A4 /* Bus.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBCF19D1F0AA00C412A4 /* Bus.m */; };
+		B2E9EBE219D1F0AA00C412A4 /* ETA.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBD119D1F0AA00C412A4 /* ETA.m */; };
+		B2E9EBE319D1F0AA00C412A4 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBD319D1F0AA00C412A4 /* Route.m */; };
+		B2E9EBE419D1F0AA00C412A4 /* Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBD519D1F0AA00C412A4 /* Stop.m */; };
+		B2E9EBE519D1F0AA00C412A4 /* TraceRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBD719D1F0AA00C412A4 /* TraceRoute.m */; };
+		B2E9EBE619D1F0AA00C412A4 /* UMNetworkingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBDA19D1F0AA00C412A4 /* UMNetworkingSession.m */; };
+		B2E9EBE719D1F0AA00C412A4 /* UMResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9EBDC19D1F0AA00C412A4 /* UMResponseSerializer.m */; };
+		B2E9EBED19D1F1A400C412A4 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBC319D1F0AA00C412A4 /* Constants.h */; };
+		B2E9EBEE19D1F1A400C412A4 /* Fare+UIColor.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBC519D1F0AA00C412A4 /* Fare+UIColor.h */; };
+		B2E9EBEF19D1F1A400C412A4 /* Announcement.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBC819D1F0AA00C412A4 /* Announcement.h */; };
+		B2E9EBF019D1F1A400C412A4 /* Arrival.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBCA19D1F0AA00C412A4 /* Arrival.h */; };
+		B2E9EBF119D1F1A400C412A4 /* ArrivalStop.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBCC19D1F0AA00C412A4 /* ArrivalStop.h */; };
+		B2E9EBF219D1F1A400C412A4 /* Bus.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBCE19D1F0AA00C412A4 /* Bus.h */; };
+		B2E9EBF319D1F1A400C412A4 /* ETA.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBD019D1F0AA00C412A4 /* ETA.h */; };
+		B2E9EBF419D1F1A400C412A4 /* Route.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBD219D1F0AA00C412A4 /* Route.h */; };
+		B2E9EBF519D1F1A400C412A4 /* Stop.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBD419D1F0AA00C412A4 /* Stop.h */; };
+		B2E9EBF619D1F1A400C412A4 /* TraceRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBD619D1F0AA00C412A4 /* TraceRoute.h */; };
+		B2E9EBF719D1F1A400C412A4 /* Objects.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBD819D1F0AA00C412A4 /* Objects.h */; };
+		B2E9EBF819D1F1A400C412A4 /* UMNetworkingSession.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBD919D1F0AA00C412A4 /* UMNetworkingSession.h */; };
+		B2E9EBF919D1F1A400C412A4 /* UMResponseSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E9EBDB19D1F0AA00C412A4 /* UMResponseSerializer.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2E9EB8F19D1EFDA00C412A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B2E9EB9119D1EFDA00C412A4 /* libFare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFare.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E9EB9419D1EFDA00C412A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2E9EB9819D1EFDA00C412A4 /* Fare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fare-Prefix.pch"; sourceTree = "<group>"; };
+		B2E9EBA219D1EFDA00C412A4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B2E9EBA519D1EFDA00C412A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B2E9EBC319D1F0AA00C412A4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		B2E9EBC519D1F0AA00C412A4 /* Fare+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fare+UIColor.h"; sourceTree = "<group>"; };
+		B2E9EBC619D1F0AA00C412A4 /* Fare+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fare+UIColor.m"; sourceTree = "<group>"; };
+		B2E9EBC819D1F0AA00C412A4 /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
+		B2E9EBC919D1F0AA00C412A4 /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
+		B2E9EBCA19D1F0AA00C412A4 /* Arrival.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrival.h; sourceTree = "<group>"; };
+		B2E9EBCB19D1F0AA00C412A4 /* Arrival.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arrival.m; sourceTree = "<group>"; };
+		B2E9EBCC19D1F0AA00C412A4 /* ArrivalStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivalStop.h; sourceTree = "<group>"; };
+		B2E9EBCD19D1F0AA00C412A4 /* ArrivalStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrivalStop.m; sourceTree = "<group>"; };
+		B2E9EBCE19D1F0AA00C412A4 /* Bus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bus.h; sourceTree = "<group>"; };
+		B2E9EBCF19D1F0AA00C412A4 /* Bus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bus.m; sourceTree = "<group>"; };
+		B2E9EBD019D1F0AA00C412A4 /* ETA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETA.h; sourceTree = "<group>"; };
+		B2E9EBD119D1F0AA00C412A4 /* ETA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETA.m; sourceTree = "<group>"; };
+		B2E9EBD219D1F0AA00C412A4 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		B2E9EBD319D1F0AA00C412A4 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
+		B2E9EBD419D1F0AA00C412A4 /* Stop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stop.h; sourceTree = "<group>"; };
+		B2E9EBD519D1F0AA00C412A4 /* Stop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stop.m; sourceTree = "<group>"; };
+		B2E9EBD619D1F0AA00C412A4 /* TraceRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceRoute.h; sourceTree = "<group>"; };
+		B2E9EBD719D1F0AA00C412A4 /* TraceRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceRoute.m; sourceTree = "<group>"; };
+		B2E9EBD819D1F0AA00C412A4 /* Objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objects.h; sourceTree = "<group>"; };
+		B2E9EBD919D1F0AA00C412A4 /* UMNetworkingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMNetworkingSession.h; sourceTree = "<group>"; };
+		B2E9EBDA19D1F0AA00C412A4 /* UMNetworkingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMNetworkingSession.m; sourceTree = "<group>"; };
+		B2E9EBDB19D1F0AA00C412A4 /* UMResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMResponseSerializer.h; sourceTree = "<group>"; };
+		B2E9EBDC19D1F0AA00C412A4 /* UMResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMResponseSerializer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2E9EB8E19D1EFDA00C412A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E9EB9519D1EFDA00C412A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2E9EB8819D1EFDA00C412A4 = {
+			isa = PBXGroup;
+			children = (
+				B2E9EB9619D1EFDA00C412A4 /* Fare */,
+				B2E9EB9319D1EFDA00C412A4 /* Frameworks */,
+				B2E9EB9219D1EFDA00C412A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2E9EB9219D1EFDA00C412A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9EB9119D1EFDA00C412A4 /* libFare.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2E9EB9319D1EFDA00C412A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9EB9419D1EFDA00C412A4 /* Foundation.framework */,
+				B2E9EBA219D1EFDA00C412A4 /* XCTest.framework */,
+				B2E9EBA519D1EFDA00C412A4 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2E9EB9619D1EFDA00C412A4 /* Fare */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9EBC319D1F0AA00C412A4 /* Constants.h */,
+				B2E9EBC419D1F0AA00C412A4 /* Misc */,
+				B2E9EBC719D1F0AA00C412A4 /* Models */,
+				B2E9EBD819D1F0AA00C412A4 /* Objects.h */,
+				B2E9EBD919D1F0AA00C412A4 /* UMNetworkingSession.h */,
+				B2E9EBDA19D1F0AA00C412A4 /* UMNetworkingSession.m */,
+				B2E9EBDB19D1F0AA00C412A4 /* UMResponseSerializer.h */,
+				B2E9EBDC19D1F0AA00C412A4 /* UMResponseSerializer.m */,
+				B2E9EB9719D1EFDA00C412A4 /* Supporting Files */,
+			);
+			path = Fare;
+			sourceTree = "<group>";
+		};
+		B2E9EB9719D1EFDA00C412A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9EB9819D1EFDA00C412A4 /* Fare-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2E9EBC419D1F0AA00C412A4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9EBC519D1F0AA00C412A4 /* Fare+UIColor.h */,
+				B2E9EBC619D1F0AA00C412A4 /* Fare+UIColor.m */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		B2E9EBC719D1F0AA00C412A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9EBC819D1F0AA00C412A4 /* Announcement.h */,
+				B2E9EBC919D1F0AA00C412A4 /* Announcement.m */,
+				B2E9EBCA19D1F0AA00C412A4 /* Arrival.h */,
+				B2E9EBCB19D1F0AA00C412A4 /* Arrival.m */,
+				B2E9EBCC19D1F0AA00C412A4 /* ArrivalStop.h */,
+				B2E9EBCD19D1F0AA00C412A4 /* ArrivalStop.m */,
+				B2E9EBCE19D1F0AA00C412A4 /* Bus.h */,
+				B2E9EBCF19D1F0AA00C412A4 /* Bus.m */,
+				B2E9EBD019D1F0AA00C412A4 /* ETA.h */,
+				B2E9EBD119D1F0AA00C412A4 /* ETA.m */,
+				B2E9EBD219D1F0AA00C412A4 /* Route.h */,
+				B2E9EBD319D1F0AA00C412A4 /* Route.m */,
+				B2E9EBD419D1F0AA00C412A4 /* Stop.h */,
+				B2E9EBD519D1F0AA00C412A4 /* Stop.m */,
+				B2E9EBD619D1F0AA00C412A4 /* TraceRoute.h */,
+				B2E9EBD719D1F0AA00C412A4 /* TraceRoute.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B2E9EBEC19D1F18F00C412A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E9EBED19D1F1A400C412A4 /* Constants.h in Headers */,
+				B2E9EBEE19D1F1A400C412A4 /* Fare+UIColor.h in Headers */,
+				B2E9EBEF19D1F1A400C412A4 /* Announcement.h in Headers */,
+				B2E9EBF019D1F1A400C412A4 /* Arrival.h in Headers */,
+				B2E9EBF119D1F1A400C412A4 /* ArrivalStop.h in Headers */,
+				B2E9EBF219D1F1A400C412A4 /* Bus.h in Headers */,
+				B2E9EBF319D1F1A400C412A4 /* ETA.h in Headers */,
+				B2E9EBF419D1F1A400C412A4 /* Route.h in Headers */,
+				B2E9EBF519D1F1A400C412A4 /* Stop.h in Headers */,
+				B2E9EBF619D1F1A400C412A4 /* TraceRoute.h in Headers */,
+				B2E9EBF719D1F1A400C412A4 /* Objects.h in Headers */,
+				B2E9EBF819D1F1A400C412A4 /* UMNetworkingSession.h in Headers */,
+				B2E9EBF919D1F1A400C412A4 /* UMResponseSerializer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B2E9EB9019D1EFDA00C412A4 /* Fare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2E9EBB419D1EFDA00C412A4 /* Build configuration list for PBXNativeTarget "Fare" */;
+			buildPhases = (
+				B2E9EB8D19D1EFDA00C412A4 /* Sources */,
+				B2E9EB8E19D1EFDA00C412A4 /* Frameworks */,
+				B2E9EB8F19D1EFDA00C412A4 /* CopyFiles */,
+				B2E9EBEC19D1F18F00C412A4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fare;
+			productName = Fare;
+			productReference = B2E9EB9119D1EFDA00C412A4 /* libFare.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2E9EB8919D1EFDA00C412A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "David Quesada";
+			};
+			buildConfigurationList = B2E9EB8C19D1EFDA00C412A4 /* Build configuration list for PBXProject "Fare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B2E9EB8819D1EFDA00C412A4;
+			productRefGroup = B2E9EB9219D1EFDA00C412A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2E9EB9019D1EFDA00C412A4 /* Fare */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2E9EB8D19D1EFDA00C412A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E9EBE619D1F0AA00C412A4 /* UMNetworkingSession.m in Sources */,
+				B2E9EBE219D1F0AA00C412A4 /* ETA.m in Sources */,
+				B2E9EBDE19D1F0AA00C412A4 /* Announcement.m in Sources */,
+				B2E9EBDD19D1F0AA00C412A4 /* Fare+UIColor.m in Sources */,
+				B2E9EBDF19D1F0AA00C412A4 /* Arrival.m in Sources */,
+				B2E9EBE019D1F0AA00C412A4 /* ArrivalStop.m in Sources */,
+				B2E9EBE119D1F0AA00C412A4 /* Bus.m in Sources */,
+				B2E9EBE719D1F0AA00C412A4 /* UMResponseSerializer.m in Sources */,
+				B2E9EBE319D1F0AA00C412A4 /* Route.m in Sources */,
+				B2E9EBE419D1F0AA00C412A4 /* Stop.m in Sources */,
+				B2E9EBE519D1F0AA00C412A4 /* TraceRoute.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B2E9EBB219D1EFDA00C412A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2E9EBB319D1EFDA00C412A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2E9EBB519D1EFDA00C412A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Fare.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fare/Fare-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Pods/Headers/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B2E9EBB619D1EFDA00C412A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Fare.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fare/Fare-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../Pods/Headers/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2E9EB8C19D1EFDA00C412A4 /* Build configuration list for PBXProject "Fare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E9EBB219D1EFDA00C412A4 /* Debug */,
+				B2E9EBB319D1EFDA00C412A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2E9EBB419D1EFDA00C412A4 /* Build configuration list for PBXNativeTarget "Fare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2E9EBB519D1EFDA00C412A4 /* Debug */,
+				B2E9EBB619D1EFDA00C412A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2E9EB8919D1EFDA00C412A4 /* Project object */;
+}

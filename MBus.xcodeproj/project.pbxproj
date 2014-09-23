@@ -98,8 +98,26 @@
 		ABDB5B4A18C0114A005AA38B /* MiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB5B4918C0114A005AA38B /* MiscViewController.m */; };
 		ABDB5B4D18C0120D005AA38B /* MiscViewControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB5B4C18C0120D005AA38B /* MiscViewControllerModel.m */; };
 		ABDB5B4F18C013A1005AA38B /* Pods-MBus-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABDB5B4E18C013A1005AA38B /* Pods-MBus-acknowledgements.plist */; };
+		B2E9EBEA19D1F10500C412A4 /* libFare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E9EBC019D1EFDA00C412A4 /* libFare.a */; };
 		F80437546AB2439BAB89944C /* libPods-MBus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1932903029B9491DBD8AB223 /* libPods-MBus.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2E9EBBF19D1EFDA00C412A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2E9EBBA19D1EFDA00C412A4 /* Fare.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B2E9EB9119D1EFDA00C412A4;
+			remoteInfo = Fare;
+		};
+		B2E9EBE819D1F0D300C412A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2E9EBBA19D1EFDA00C412A4 /* Fare.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B2E9EB9019D1EFDA00C412A4;
+			remoteInfo = Fare;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1932903029B9491DBD8AB223 /* libPods-MBus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MBus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +296,7 @@
 		ABDB5B4B18C0120D005AA38B /* MiscViewControllerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscViewControllerModel.h; sourceTree = "<group>"; };
 		ABDB5B4C18C0120D005AA38B /* MiscViewControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscViewControllerModel.m; sourceTree = "<group>"; };
 		ABDB5B4E18C013A1005AA38B /* Pods-MBus-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-MBus-acknowledgements.plist"; path = "Pods/Pods-MBus-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		B2E9EBBA19D1EFDA00C412A4 /* Fare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fare.xcodeproj; path = Fare/Fare.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E9EBEA19D1F10500C412A4 /* libFare.a in Frameworks */,
 				AB4C127B18C2C75500485234 /* MapKit.framework in Frameworks */,
 				AB467E1B18B44F0C00AF1076 /* AdSupport.framework in Frameworks */,
 				AB3652B618DAB4A100F9688A /* libGoogleAnalyticsServices.a in Frameworks */,
@@ -314,6 +334,7 @@
 		AB467DA018B447E300AF1076 = {
 			isa = PBXGroup;
 			children = (
+				B2E9EBBA19D1EFDA00C412A4 /* Fare.xcodeproj */,
 				AB467DEB18B44A1C00AF1076 /* Source */,
 				AB467DE418B44A1C00AF1076 /* Resources */,
 				AB467DAB18B447E300AF1076 /* Frameworks */,
@@ -700,6 +721,14 @@
 			path = RBBAnimation;
 			sourceTree = "<group>";
 		};
+		B2E9EBBB19D1EFDA00C412A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2E9EBC019D1EFDA00C412A4 /* libFare.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -716,6 +745,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B2E9EBE919D1F0D300C412A4 /* PBXTargetDependency */,
 			);
 			name = MBus;
 			productName = MBus;
@@ -747,12 +777,28 @@
 			mainGroup = AB467DA018B447E300AF1076;
 			productRefGroup = AB467DAA18B447E300AF1076 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B2E9EBBB19D1EFDA00C412A4 /* Products */;
+					ProjectRef = B2E9EBBA19D1EFDA00C412A4 /* Fare.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AB467DA818B447E300AF1076 /* MBus */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B2E9EBC019D1EFDA00C412A4 /* libFare.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFare.a;
+			remoteRef = B2E9EBBF19D1EFDA00C412A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AB467DA718B447E300AF1076 /* Resources */ = {
@@ -890,6 +936,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B2E9EBE919D1F0D300C412A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fare;
+			targetProxy = B2E9EBE819D1F0D300C412A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		AB467DDC18B447E300AF1076 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -967,11 +1021,35 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86DC44F57945483680C8BFCA /* Pods-MBus.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: David Quesada (PT73X94ZK5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MBus/Source/Misc/MBus-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/CGLMail\"",
+					"\"${PODS_ROOT}/Headers/Facebook-iOS-SDK\"",
+					"\"${PODS_ROOT}/Headers/Facebook-iOS-SDK/FacebookSDK\"",
+					"\"${PODS_ROOT}/Headers/Fare\"",
+					"\"${PODS_ROOT}/Headers/FormatterKit\"",
+					"\"${PODS_ROOT}/Headers/GCBActionSheet\"",
+					"\"${PODS_ROOT}/Headers/Google-Maps-iOS-SDK\"",
+					"\"${PODS_ROOT}/Headers/Google-Maps-iOS-SDK/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Mantle\"",
+					"\"${PODS_ROOT}/Headers/MarqueeLabel\"",
+					"\"${PODS_ROOT}/Headers/ObjectiveSugar\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/SAMGradientView\"",
+					"\"${PODS_ROOT}/Headers/SVPulsingAnnotationView\"",
+					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
+					"\"${PODS_ROOT}/Headers/VTAcknowledgementsViewController\"",
+					"\"${PODS_ROOT}/Headers/XMLDictionary\"",
+					"\"${PODS_ROOT}/Headers/libextobjc\"",
+				);
 				INFOPLIST_FILE = "MBus/Resources/Misc/MBus-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -979,6 +1057,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Fare/Fare\"/** \"$(SRCROOT)/Fare/Fare/Models\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -987,11 +1066,35 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86DC44F57945483680C8BFCA /* Pods-MBus.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: David Quesada (PT73X94ZK5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MBus/Source/Misc/MBus-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/CGLMail\"",
+					"\"${PODS_ROOT}/Headers/Facebook-iOS-SDK\"",
+					"\"${PODS_ROOT}/Headers/Facebook-iOS-SDK/FacebookSDK\"",
+					"\"${PODS_ROOT}/Headers/Fare\"",
+					"\"${PODS_ROOT}/Headers/FormatterKit\"",
+					"\"${PODS_ROOT}/Headers/GCBActionSheet\"",
+					"\"${PODS_ROOT}/Headers/Google-Maps-iOS-SDK\"",
+					"\"${PODS_ROOT}/Headers/Google-Maps-iOS-SDK/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Mantle\"",
+					"\"${PODS_ROOT}/Headers/MarqueeLabel\"",
+					"\"${PODS_ROOT}/Headers/ObjectiveSugar\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/SAMGradientView\"",
+					"\"${PODS_ROOT}/Headers/SVPulsingAnnotationView\"",
+					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
+					"\"${PODS_ROOT}/Headers/VTAcknowledgementsViewController\"",
+					"\"${PODS_ROOT}/Headers/XMLDictionary\"",
+					"\"${PODS_ROOT}/Headers/libextobjc\"",
+				);
 				INFOPLIST_FILE = "MBus/Resources/Misc/MBus-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -999,6 +1102,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Fare/Fare\"/** \"$(SRCROOT)/Fare/Fare/Models\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
